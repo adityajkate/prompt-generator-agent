@@ -75,7 +75,6 @@ export default function ThemeToggle() {
             </div>
           </div>
 
-
           <div
             className="rays"
             style={{
@@ -94,7 +93,6 @@ export default function ThemeToggle() {
             ))}
           </div>
         </div>
-
 
         <div
           className="stars"
@@ -126,7 +124,6 @@ export default function ThemeToggle() {
             }} />
           ))}
         </div>
-
 
         <div
           className="clouds"

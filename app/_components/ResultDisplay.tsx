@@ -71,7 +71,6 @@ export default function ResultDisplay({ state, onRetry }: ResultDisplayProps) {
     );
   }
 
-
   if (state.status === 'loading') {
     return (
       <section className="mt-6 sm:mt-10" aria-busy="true" aria-label="Generating prompt">
@@ -80,7 +79,6 @@ export default function ResultDisplay({ state, onRetry }: ResultDisplayProps) {
       </section>
     );
   }
-
 
   if (state.status === 'error') {
     return (
@@ -107,7 +105,6 @@ export default function ResultDisplay({ state, onRetry }: ResultDisplayProps) {
       </section>
     );
   }
-
 
   const data = (state as Extract<typeof state, { status: 'success' }>).data;
 

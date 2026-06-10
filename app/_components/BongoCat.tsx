@@ -25,14 +25,12 @@ export default function BongoCat() {
     const pawLeftUp = el.querySelector(sel('.paw-left .up')) as HTMLElement;
     const pawLeftDown = el.querySelector(sel('.paw-left .down')) as HTMLElement;
 
-    // Terminal lines: stroke-dasharray animation instead of DrawSVG
     const terminalLines = el.querySelectorAll('.terminal-code line');
     terminalLines.forEach((line) => {
       const len = (line as SVGLineElement).getTotalLength?.() || 100;
       gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
     });
 
-    // Animate paw states
     const animatePaw = (selector: HTMLElement) =>
       gsap.fromTo(
         selector,
@@ -48,7 +46,6 @@ export default function BongoCat() {
       .timeScale(1.6);
     tlRef.current = tl;
 
-    // Terminal typing animation
     gsap.fromTo(
       terminalLines,
       { strokeDashoffset: (i: number, el: SVGLineElement) => el.getTotalLength?.() || 100 },
@@ -61,7 +58,6 @@ export default function BongoCat() {
       }
     );
 
-    // Music notes
     const noteEls: HTMLElement[] = gsap.utils.toArray('.note') as HTMLElement[];
     gsap.utils.shuffle(noteEls);
 
@@ -132,7 +128,7 @@ export default function BongoCat() {
             <path d="M365.4,168.9c0,.3-.8,3.6,1.5,6a5.9,5.9,0,0,0,7.2,1.4,6.1,6.1,0,0,0,2.2-7.7c-1.5-3.1-5.7-4.5-7.3-3.2s-.8,6,1,6.6,3.3-.7,3.3-2.1-1.5-1.8-1.6-1.9" />
           </g>
 
-          {/* Right headphone */}
+          {}
           <g className="headphone headphone-right">
             <g className="speaker">
               <path d="M400.7,80.2c-14.1-20.8-40.2.3-50.7,15-8.7,12.2-9.7,30.3,2.8,37.3,5.4-9,11.8-15.6,21-26.2A214.1,214.1,0,0,1,400.7,80.2Z" />
@@ -142,7 +138,7 @@ export default function BongoCat() {
             <path className="band" d="M515,40.6c-15.9-4.6-57-14.1-104,2.3a166.9,166.9,0,0,0-60.9,37.3" />
           </g>
 
-          {/* Music notes right */}
+          {}
           <g className="music music-right">
             <g className="note"><g><path d="M368.5,46.5c.5,2.1,1.2,3.5,3.8,6.3s5.1,4.3,6.5,7.2a11.1,11.1,0,0,1,.7,2,10.5,10.5,0,0,1-.7,6.5" /><path d="M368.5,46.5a20.8,20.8,0,0,0,2.4,11.7c2.3,4.4,5,5.4,6.8,9.5a17.5,17.5,0,0,1,.4,11" /><line x1="368.5" y1="47.7" x2="368.5" y2="92.8" /><path d="M368.5,92.8c.1-3.1-4.7-6.3-9-6.3s-8.7,2.7-8.7,5.8,4.8,5.7,8.7,5.8S368.3,95.8,368.5,92.8Z" /></g><g><path d="M368.5,46.5c.5,2.1,1.2,3.5,3.8,6.3s5.1,4.3,6.5,7.2a11.1,11.1,0,0,1,.7,2,10.5,10.5,0,0,1-.7,6.5" /><path d="M368.5,46.5a20.8,20.8,0,0,0,2.4,11.7c2.3,4.4,5,5.4,6.8,9.5a17.5,17.5,0,0,1,.4,11" /><line x1="368.5" y1="47.7" x2="368.5" y2="92.8" /><path d="M368.5,92.8c.1-3.1-4.7-6.3-9-6.3s-8.7,2.7-8.7,5.8,4.8,5.7,8.7,5.8S368.3,95.8,368.5,92.8Z" /></g></g>
             <g className="note"><g><polyline points="350 81.7 350 43.5 382.7 50.7 382.7 89.5" /><path d="M350,82.3c0-3.1-4.5-5.7-8.2-5.9s-9.3,2.8-9.2,6,4.7,5.7,8.6,5.7S349.9,85.5,350,82.3Z" /><path d="M382.7,89.9c0-3.1-4.4-5.7-8.2-5.8s-9.3,2.7-9.2,5.9,4.7,5.7,8.7,5.7S382.7,93.1,382.7,89.9Z" /></g><g><polyline points="350 81.7 350 43.5 382.7 50.7 382.7 89.5" /><path d="M350,82.3c0-3.1-4.5-5.7-8.2-5.9s-9.3,2.8-9.2,6,4.7,5.7,8.6,5.7S349.9,85.5,350,82.3Z" /><path d="M382.7,89.9c0-3.1-4.4-5.7-8.2-5.8s-9.3,2.7-9.2,5.9,4.7,5.7,8.7,5.7S382.7,93.1,382.7,89.9Z" /></g></g>
@@ -150,7 +146,7 @@ export default function BongoCat() {
             <g className="note"><g><path d="M371.8,79.5c0-3.1-4.5-5.8-8.3-5.9s-9.3,2.8-9.2,6,4.7,5.7,8.7,5.7S371.8,82.7,371.8,79.5Z" /><line x1="371.8" y1="79.5" x2="371.8" y2="33.3" /><path d="M371.8,33.4a26.6,26.6,0,0,0,3.6,7.8c3.7,5.7,7.6,7,8.8,11.6.5,1.7.7,4.4-.9,8.3" /></g><g><path d="M371.8,79.5c0-3.1-4.5-5.8-8.3-5.9s-9.3,2.8-9.2,6,4.7,5.7,8.7,5.7S371.8,82.7,371.8,79.5Z" /><line x1="371.8" y1="79.5" x2="371.8" y2="33.3" /><path d="M371.8,33.4a26.6,26.6,0,0,0,3.6,7.8c3.7,5.7,7.6,7,8.8,11.6.5,1.7.7,4.4-.9,8.3" /></g></g>
           </g>
 
-          {/* Table + laptop */}
+          {}
           <g className="table">
             <polygon points="25.3 158.5 783.2 293 513 354.9 25.3 158.5" />
             <line x1="25.3" y1="158.5" x2="783.2" y2="293" className="table-glow" />
@@ -171,7 +167,7 @@ export default function BongoCat() {
             <polygon points="394.2 274.5 394.4 273.6 246.7 246.5 237.7 248.1 237.5 248.8 382.8 276.8 394.2 274.5" />
           </g>
 
-          {/* Right paw */}
+          {}
           <g className="paw paw-right">
             <path className="down" d="M289.1,181.7c-12.1,9.8-20.6,20.7-20.7,32.1-.2,9,3.8,20.4,13.3,25.2s20.1.6,29.6-3.4c13.4-5.7,23.9-14.6,29.4-21.5" />
             <g className="up">
@@ -185,7 +181,7 @@ export default function BongoCat() {
             </g>
           </g>
 
-          {/* Terminal frame + code */}
+          {}
           <polygon className="terminal-frame" points="93.8 63.3 284.1 73 335.9 230.5 146.2 197.6 93.8 63.3" />
           <g className="terminal-code">
             <line x1="260.2" y1="92.3" x2="212.2" y2="88.7" />
@@ -216,10 +212,10 @@ export default function BongoCat() {
             <line x2="180.8" y2="182.3" x1="202.7" y1="186" />
           </g>
 
-          {/* Laptop base + cover */}
+          {}
           <polygon className="laptop-base" points="103.2 263.6 452.1 339 360.8 12.4 2 2 103.2 263.6" />
 
-          {/* Left paw */}
+          {}
           <g className="paw paw-left">
             <g className="up">
               <path d="M586.6,208.8c-.6-2.3-4.2-15.6-17.2-22.2-2.7-1.3-12.8-6.4-23.6-1.8s-14.6,16.5-14.8,18.4c-1.2,9-.7,18.4,2.4,26.1,2.4,6,7.5,17.2,9.7,20.2" />
@@ -233,7 +229,7 @@ export default function BongoCat() {
             <path className="down" d="M534.1,231.4c-19.7,6-32.9,18.4-34.2,29.1a30.1,30.1,0,0,0,1.7,14.1,24.8,24.8,0,0,0,6.1,8.8c6,5.1,16.8,4,38-3.9a288.7,288.7,0,0,0,46.5-22.1" />
           </g>
 
-          {/* Left headphone */}
+          {}
           <g className="headphone headphone-left">
             <g className="speaker">
               <path d="M609.5,137.3c-17.1,6.3-20.7,51.4-4.5,67.3,1.4,1.5,5.5,5.5,11.3,5.9,8.2.5,14.5-6.3,16.9-8.9,10.1-11,11.5-27.5,8.1-40.1-1.4-4.8-3.9-14-12.7-19.9C627.4,140.8,617.7,134.3,609.5,137.3Z" />
@@ -243,7 +239,7 @@ export default function BongoCat() {
             <path className="band" d="M638.9,157.7c-4-16.8-25.9-61.9-75.3-95.3A155.5,155.5,0,0,0,515,40.6" />
           </g>
 
-          {/* Music notes left */}
+          {}
           <g className="music music-left">
             <g className="note"><g><path d="M633.3,119.9c.6,2,1.3,3.5,3.8,6.3s5.2,4.3,6.5,7.2a6.9,6.9,0,0,1,.7,1.9,10.2,10.2,0,0,1-.7,6.6" /><path d="M633.3,119.9a23,23,0,0,0,2.4,11.7c2.4,4.3,5.1,5.4,6.8,9.5a16.9,16.9,0,0,1,.5,11" /><line x1="633.3" y1="121.1" x2="633.3" y2="166.2" /><path d="M633.3,166.2c.2-3.2-4.6-6.3-8.9-6.3s-8.7,2.6-8.7,5.7,4.7,5.7,8.7,5.8S633.1,169.2,633.3,166.2Z" /></g><g><path d="M633.3,119.9c.6,2,1.3,3.5,3.8,6.3s5.2,4.3,6.5,7.2a6.9,6.9,0,0,1,.7,1.9,10.2,10.2,0,0,1-.7,6.6" /><path d="M633.3,119.9a23,23,0,0,0,2.4,11.7c2.4,4.3,5.1,5.4,6.8,9.5a16.9,16.9,0,0,1,.5,11" /><line x1="633.3" y1="121.1" x2="633.3" y2="166.2" /><path d="M633.3,166.2c.2-3.2-4.6-6.3-8.9-6.3s-8.7,2.6-8.7,5.7,4.7,5.7,8.7,5.8S633.1,169.2,633.3,166.2Z" /></g></g>
             <g className="note"><g><polyline points="614.8 155 614.8 116.8 647.5 124 647.5 162.9" /><path d="M614.8,155.7c0-3.1-4.4-5.7-8.2-5.9s-9.2,2.8-9.2,6,4.7,5.6,8.7,5.6S614.8,158.8,614.8,155.7Z" /><path d="M647.5,163.3c.1-3.1-4.4-5.7-8.2-5.9s-9.2,2.8-9.1,6,4.7,5.7,8.6,5.7S647.5,166.5,647.5,163.3Z" /></g><g><polyline points="614.8 155 614.8 116.8 647.5 124 647.5 162.9" /><path d="M614.8,155.7c0-3.1-4.4-5.7-8.2-5.9s-9.2,2.8-9.2,6,4.7,5.6,8.7,5.6S614.8,158.8,614.8,155.7Z" /><path d="M647.5,163.3c.1-3.1-4.4-5.7-8.2-5.9s-9.2,2.8-9.1,6,4.7,5.7,8.6,5.7S647.5,166.5,647.5,163.3Z" /></g></g>

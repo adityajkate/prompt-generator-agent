@@ -37,7 +37,6 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   }, []);
 
-
   if (!mounted) {
     return <div style={{ visibility: 'hidden' }}>{children}</div>;
   }
