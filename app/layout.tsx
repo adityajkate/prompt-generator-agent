@@ -19,8 +19,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Prompt Studio — Professional Diffusion Prompt Generator",
-    template: "%s | Prompt Studio",
+    default: "Prompt Generator — Professional Diffusion Prompt Generator",
+    template: "%s | Prompt Generator",
   },
   description:
     "Generate professional, award-grade diffusion model prompts from a theme and aspect ratio. Minimalist, aesthetic, 8K-ready image briefs for creators.",
@@ -33,29 +33,29 @@ export const metadata: Metadata = {
     "NVIDIA prompt generator",
     "professional image prompts",
   ],
-  authors: [{ name: "Prompt Studio" }],
+  authors: [{ name: "Prompt Generator" }],
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: "Prompt Studio — Professional Diffusion Prompt Generator",
+    title: "Prompt Generator — Professional Diffusion Prompt Generator",
     description:
       "Generate professional, award-grade diffusion model prompts from a theme and aspect ratio.",
     url: "https://prompt-generator-agent.vercel.app",
-    siteName: "Prompt Studio",
+    siteName: "Prompt Generator",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Prompt Studio",
+    title: "Prompt Generator",
     description:
       "Generate professional diffusion prompts from a theme and aspect ratio.",
   },
   icons: {
     icon: [
-      { url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>✦</text></svg>", type: "image/svg+xml" },
+      { url: 'data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23f59e0b%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23ef4444%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%2318181b%27/%3E%3Ctext x=%2750%27 y=%2772%27 font-family=%27system-ui%27 font-weight=%27700%27 font-size=%2748%27 fill=%27url(%23g)%27 text-anchor=%27middle%27%3EPG%3C/text%3E%3C/svg%3E', type: 'image/svg+xml' },
     ],
   },
 };
@@ -75,7 +75,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Prompt Studio",
+              name: "Prompt Generator",
               description:
                 "Generate professional diffusion model prompts from a theme and aspect ratio.",
               url: "https://prompt-generator-agent.vercel.app",
