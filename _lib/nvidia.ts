@@ -1,7 +1,7 @@
 import type { GenerateResult } from './types';
 
 const NVIDIA_API_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
-const MODEL = 'meta/llama-3.3-70b-instruct';
+const MODEL = 'google/gemma-3n-e2b-it';
 const REQUEST_TIMEOUT_MS = 30_000;
 const MAX_THEME_LENGTH = 1_000;
 
@@ -91,10 +91,11 @@ export async function generatePrompt(
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: buildUserPrompt(safeTheme, aspectRatio) },
         ],
-        max_tokens: 1024,
-        temperature: 0.7,
-        
-        response_format: { type: 'json_object' },
+        max_tokens: 512,
+        temperature: 0.20,
+        top_p: 0.70,
+        frequency_penalty: 0.00,
+        presence_penalty: 0.00,
       }),
       signal: controller.signal,
     });
