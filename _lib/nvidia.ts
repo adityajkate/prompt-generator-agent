@@ -91,7 +91,7 @@ export async function generatePrompt(
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: buildUserPrompt(safeTheme, aspectRatio) },
         ],
-        max_tokens: 512,
+        max_tokens: 1024,
         temperature: 0.20,
         top_p: 0.70,
         frequency_penalty: 0.00,
