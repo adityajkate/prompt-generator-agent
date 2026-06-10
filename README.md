@@ -1,8 +1,19 @@
-# Prompt Generator
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityajkate/prompt-generator-agent/master/.github/banner-dark.svg">
+    <img src="https://raw.githubusercontent.com/adityajkate/prompt-generator-agent/master/.github/banner-light.svg" width="100%" height="auto" alt="Prompt Generator">
+  </picture>
+</p>
 
-Generate professional diffusion model prompts from a theme and aspect ratio.
+<p align="center">
+  <a href="https://prompt-generator-agent.vercel.app">prompt-generator-agent.vercel.app</a>
+</p>
 
-Built with Next.js 16, powered by NVIDIA Llama 3.3 70B.
+<br>
+
+Generate professional diffusion model prompts from a theme and aspect ratio. Built with Next.js 16, powered by NVIDIA Llama 3.3 70B.
+
+<br>
 
 ## Usage
 
@@ -35,4 +46,6 @@ Push to GitHub, import into Vercel, set `NVIDIA_API_KEY` in environment variable
 
 ---
 
-[prompt-generator-agent.vercel.app](https://prompt-generator-agent.vercel.app)
+<p align="center">
+  <a href="https://prompt-generator-agent.vercel.app">prompt-generator-agent.vercel.app</a>
+</p>

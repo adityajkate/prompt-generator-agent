@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b">
+        <animate attributeName="stop-color" values="#f59e0b;#ef4444;#a855f7;#f59e0b" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#a855f7">
+        <animate attributeName="stop-color" values="#a855f7;#f59e0b;#ef4444;#a855f7" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#27272a"/>
+      <stop offset="50%" stop-color="#3f3f46"/>
+      <stop offset="100%" stop-color="#27272a">
+        <animate attributeName="stop-color" values="#27272a;#52525b;#27272a" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(245,158,11,0.15)">
+        <animate attributeName="stop-color" values="rgba(245,158,11,0.15);rgba(168,85,247,0.12);rgba(245,158,11,0.15)" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="260" rx="16" fill="#09090b"/>
+
+  <!-- Glow orbs -->
+  <circle cx="200" cy="130" r="160" fill="url(#glow)"/>
+  <circle cx="700" cy="130" r="160" fill="url(#glow)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Animated ring -->
+  <circle cx="160" cy="85" r="42" stroke="url(#g1)" stroke-width="2" fill="none" opacity="0.8">
+    <animate attributeName="r" values="42;46;42" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="160" cy="85" r="38" stroke="url(#g1)" stroke-width="1.5" fill="none" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" from="0 160 85" to="360 160 85" dur="12s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Core dot -->
+  <circle cx="160" cy="85" r="6" fill="#a1a1aa"/>
+
+  <!-- Title -->
+  <text x="220" y="78" font-family="system-ui, sans-serif" font-size="32" font-weight="600" fill="#f4f4f5" letter-spacing="-0.5">Prompt Generator</text>
+
+  <!-- Subtitle -->
+  <text x="220" y="105" font-family="system-ui, sans-serif" font-size="14" fill="#a1a1aa" letter-spacing="0.3">Professional Diffusion Prompt Generator</text>
+
+  <!-- Divider line -->
+  <line x1="220" y1="120" x2="750" y2="120" stroke="url(#g2)" stroke-width="1"/>
+
+  <!-- Feature pills -->
+  <rect x="220" y="140" width="110" height="28" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <text x="275" y="159" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">Next.js 16</text>
+
+  <rect x="342" y="140" width="100" height="28" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <text x="392" y="159" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">Tailwind v4</text>
+
+  <rect x="454" y="140" width="140" height="28" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <text x="524" y="159" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">NVIDIA Llama 3.3</text>
+
+  <rect x="606" y="140" width="100" height="28" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <text x="656" y="159" font-family="system-ui, sans-serif" font-size="11" fill="#a1a1aa" text-anchor="middle">GSAP + Three</text>
+
+  <!-- Theme + aspect ratio input simulation -->
+  <rect x="220" y="185" width="200" height="36" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <text x="235" y="208" font-family="system-ui, sans-serif" font-size="12" fill="#52525b">neon-lit cyberpunk city at dusk</text>
+  <circle cx="402" cy="203" r="3" fill="#52525b">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <rect x="432" y="185" width="86" height="36" rx="10" fill="#18181b" stroke="#27272a" stroke-width="1"/>
+  <text x="460" y="208" font-family="system-ui, sans-serif" font-size="12" fill="#52525b">16:9</text>
+  <polygon points="500,200 505,208 510,200" fill="#52525b"/>
+
+  <!-- Generate button glow -->
+  <rect x="530" y="185" width="120" height="36" rx="18" fill="url(#g1)">
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <text x="590" y="208" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#09090b" text-anchor="middle">Generate</text>
+
+  <!-- URL at bottom -->
+  <text x="450" y="245" font-family="system-ui, sans-serif" font-size="11" fill="#52525b" text-anchor="middle">prompt-generator-agent.vercel.app</text>
+</svg>
