@@ -50,7 +50,7 @@ export default function ClientPage() {
       <main className="mx-auto w-full max-w-2xl px-4 sm:px-6 pt-12 sm:pt-16 pb-16 sm:pb-24">
         <div className="mb-10 sm:mb-14">
           <h1 className="text-xl sm:text-2xl font-medium tracking-tight" style={{ color: 'var(--fg)' }}>
-            Prompt Studio
+            Prompt Generator
           </h1>
           <p className="mt-1 text-xs sm:text-sm" style={{ color: 'var(--muted)' }}>
             Generate professional image prompts from a theme and aspect ratio.
