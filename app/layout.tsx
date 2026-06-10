@@ -54,9 +54,7 @@ export const metadata: Metadata = {
       "Generate professional diffusion prompts from a theme and aspect ratio.",
   },
   icons: {
-    icon: [
-      { url: 'data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cdefs%3E%3ClinearGradient id=%27g%27 x1=%270%25%27 y1=%270%25%27 x2=%27100%25%27 y2=%27100%25%27%3E%3Cstop offset=%270%25%27 stop-color=%27%23f59e0b%27/%3E%3Cstop offset=%27100%25%27 stop-color=%27%23ef4444%27/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%2318181b%27/%3E%3Ctext x=%2750%27 y=%2772%27 font-family=%27system-ui%27 font-weight=%27700%27 font-size=%2748%27 fill=%27url(%23g)%27 text-anchor=%27middle%27%3EPG%3C/text%3E%3C/svg%3E', type: 'image/svg+xml' },
-    ],
+    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='5' fill='%23a1a1aa'/%3E%3C/svg%3E",
   },
 };
 
