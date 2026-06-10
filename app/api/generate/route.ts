@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { validateGenerateRequest } from '@/_lib/validation';
 import { generatePrompt } from '@/_lib/nvidia';
 
+export const maxDuration = 60;
+
 export async function POST(request: NextRequest) {
   try {
     
