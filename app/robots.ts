@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://prompt-studio.vercel.app/sitemap.xml",
+    sitemap: "https://prompt-generator-agent.vercel.app/sitemap.xml",
   };
 }

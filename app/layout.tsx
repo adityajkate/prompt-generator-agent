@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Prompt Studio — Professional Diffusion Prompt Generator",
     description:
       "Generate professional, award-grade diffusion model prompts from a theme and aspect ratio.",
-    url: "https://prompt-studio.vercel.app",
+    url: "https://prompt-generator-agent.vercel.app",
     siteName: "Prompt Studio",
     locale: "en_US",
     type: "website",
@@ -68,7 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} antialiased`} data-theme="dark" suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://prompt-studio.vercel.app" />
+        <link rel="canonical" href="https://prompt-generator-agent.vercel.app" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -78,7 +78,7 @@ export default function RootLayout({
               name: "Prompt Studio",
               description:
                 "Generate professional diffusion model prompts from a theme and aspect ratio.",
-              url: "https://prompt-studio.vercel.app",
+              url: "https://prompt-generator-agent.vercel.app",
               applicationCategory: "Multimedia",
               operatingSystem: "Web",
               offers: {
