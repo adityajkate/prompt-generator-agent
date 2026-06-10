@@ -14,11 +14,11 @@ Output is a single cohesive prompt ready to paste into any diffusion model.
 
 ## Tech
 
-- **Framework** — Next.js 16 (App Router)
-- **Styling** — Tailwind CSS v4
-- **AI** — NVIDIA Llama 3.3 70B via OpenAI-compatible API
-- **Animation** — GSAP, Three.js
-- **Font** — Geist
+- **Framework** - Next.js 16 (App Router)
+- **Styling** - Tailwind CSS v4
+- **AI** - NVIDIA Llama 3.3 70B via OpenAI-compatible API
+- **Animation** - GSAP, Three.js
+- **Font** - Geist
 
 ## Local
 
