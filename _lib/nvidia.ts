@@ -49,10 +49,6 @@ function buildUserPrompt(theme: string, aspectRatio: string): string {
   ].join('\n');
 }
 
-/**
- * Extracts a JSON object from model output, tolerating leading/trailing prose
- * or code fences that the model may add despite instructions.
- */
 function extractJson(content: string): Record<string, unknown> {
   const start = content.indexOf('{');
   const end = content.lastIndexOf('}');
@@ -75,7 +71,7 @@ export async function generatePrompt(
   if (!trimmedTheme) {
     throw new Error('INVALID_INPUT');
   }
-  // Cap length to avoid sending oversized payloads / runaway token cost.
+  
   const safeTheme = trimmedTheme.slice(0, MAX_THEME_LENGTH);
 
   const controller = new AbortController();
@@ -97,7 +93,7 @@ export async function generatePrompt(
         ],
         max_tokens: 1024,
         temperature: 0.7,
-        // OpenAI-compatible JSON mode: forces well-formed JSON output.
+        
         response_format: { type: 'json_object' },
       }),
       signal: controller.signal,

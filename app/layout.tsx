@@ -19,7 +19,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "Prompt Generator — Professional Diffusion Prompt Generator",
+    default: "Prompt Generator - Professional Diffusion Prompt Generator",
     template: "%s | Prompt Generator",
   },
   description:
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Prompt Generator — Professional Diffusion Prompt Generator",
+    title: "Prompt Generator - Professional Diffusion Prompt Generator",
     description:
       "Generate professional, award-grade diffusion model prompts from a theme and aspect ratio.",
     url: "https://prompt-generator-agent.vercel.app",

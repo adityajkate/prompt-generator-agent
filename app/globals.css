@@ -5,7 +5,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* ----- @property for animatable angles ----- */
 @property --angle-1 {
   syntax: "<angle>";
   inherits: false;
@@ -18,7 +17,6 @@
   initial-value: -45deg;
 }
 
-/* ----- Theme variables ----- */
 :root,
 [data-theme="dark"] {
   --bg: #09090b;
@@ -144,7 +142,6 @@ body:has([data-theme="light"]) {
   color: #292524;
 }
 
-/* ----- Light mode overrides for inline Tailwind zinc classes ----- */
 [data-theme="light"] input,
 [data-theme="light"] select {
   background: #ffffff !important;
@@ -200,7 +197,6 @@ body:has([data-theme="light"]) {
   color: #1c1917 !important;
 }
 
-/* ----- Bongo Cat SVG ----- */
 #bongo-cat {
   fill: var(--bg);
   stroke-linecap: round;
@@ -252,7 +248,6 @@ body:has([data-theme="light"]) {
   stroke: var(--cat-pink);
 }
 
-/* ----- Premium Button ----- */
 .btn-premium-wrap {
   position: relative;
   pointer-events: none;
@@ -296,7 +291,6 @@ body:has([data-theme="light"]) {
   box-shadow: var(--btn-shadow-active);
 }
 
-/* Border ring */
 .btn-premium::after {
   content: "";
   position: absolute;
@@ -329,7 +323,6 @@ body:has([data-theme="light"]) {
   --angle-1: -75deg;
 }
 
-/* Inner text */
 .btn-premium span {
   user-select: none;
   color: var(--btn-text);
@@ -357,7 +350,6 @@ body:has([data-theme="light"]) {
   text-shadow: 0.025em 0.1em 0.05em #00000014;
 }
 
-/* Shine overlay on text */
 .btn-premium span::after {
   content: "";
   position: absolute;
@@ -386,7 +378,6 @@ body:has([data-theme="light"]) {
   background-position: 50% 15%;
 }
 
-/* Shadow beneath */
 .btn-premium-shadow {
   width: calc(100% + 2em);
   height: calc(100% + 2em);
@@ -446,8 +437,6 @@ body:has([data-theme="light"]) {
   top: calc(1em - 0.5em);
   opacity: 0.75;
 }
-
-/* ------ */
 
 @keyframes shimmer {
   0% { background-position: -200% 0; }

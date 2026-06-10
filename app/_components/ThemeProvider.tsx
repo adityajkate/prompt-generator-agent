@@ -37,7 +37,7 @@ export default function ThemeProvider({ children }: { children: React.ReactNode 
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   }, []);
 
-  // Prevent flash by rendering children only after mount
+
   if (!mounted) {
     return <div style={{ visibility: 'hidden' }}>{children}</div>;
   }

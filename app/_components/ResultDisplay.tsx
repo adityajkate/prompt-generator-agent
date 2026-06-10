@@ -55,7 +55,7 @@ function CopyButton({ text }: { text: string }) {
 }
 
 export default function ResultDisplay({ state, onRetry }: ResultDisplayProps) {
-  // IDLE
+
   if (state.status === 'idle') {
     return (
       <div className="mt-16 sm:mt-24 text-center">
@@ -71,7 +71,7 @@ export default function ResultDisplay({ state, onRetry }: ResultDisplayProps) {
     );
   }
 
-  // LOADING – bongo cat
+
   if (state.status === 'loading') {
     return (
       <section className="mt-6 sm:mt-10" aria-busy="true" aria-label="Generating prompt">
@@ -81,7 +81,7 @@ export default function ResultDisplay({ state, onRetry }: ResultDisplayProps) {
     );
   }
 
-  // ERROR
+
   if (state.status === 'error') {
     return (
       <section className="mt-12 sm:mt-16">
@@ -108,7 +108,7 @@ export default function ResultDisplay({ state, onRetry }: ResultDisplayProps) {
     );
   }
 
-  // SUCCESS
+
   const data = (state as Extract<typeof state, { status: 'success' }>).data;
 
   return (

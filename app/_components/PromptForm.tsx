@@ -96,7 +96,7 @@ export default function PromptForm({
         </div>
       </div>
 
-      {/* Premium button */}
+
       <div className="btn-premium-wrap">
         <button
           type="submit"

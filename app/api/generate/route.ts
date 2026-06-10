@@ -4,7 +4,7 @@ import { generatePrompt } from '@/_lib/nvidia';
 
 export async function POST(request: NextRequest) {
   try {
-    // Validate Content-Type header
+    
     const contentType = request.headers.get('content-type') || '';
     if (!contentType.includes('application/json')) {
       return NextResponse.json(
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Validate and sanitize input
+    
     const parsed = validateGenerateRequest(body);
     if (!parsed.success) {
       return NextResponse.json(
@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Call NVIDIA API
+    
     const result = await generatePrompt(
       parsed.data.theme,
       parsed.data.aspectRatio
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(result);
   } catch (error) {
-    // Log details server-side for debugging
+    
     if (error instanceof Error) {
       if (error.message === 'CONFIG_ERROR') {
         console.error('[/api/generate] NVIDIA_API_KEY is not configured');
@@ -111,7 +111,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Catch-all: never expose internal details
+    
     console.error('[/api/generate] Unexpected error:', error);
     return NextResponse.json(
       {

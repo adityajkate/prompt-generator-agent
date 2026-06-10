@@ -19,7 +19,7 @@ export function validateGenerateRequest(body: unknown): ValidationResult {
 
   const data = body as Record<string, unknown>;
 
-  // Validate theme
+  
   if (typeof data.theme !== 'string') {
     return { success: false, error: 'Theme must be a text string' };
   }
@@ -36,7 +36,7 @@ export function validateGenerateRequest(body: unknown): ValidationResult {
     return { success: false, error: 'Theme must be 200 characters or fewer' };
   }
 
-  // Validate aspect ratio
+  
   if (!ASPECT_RATIOS.includes(data.aspectRatio as AspectRatio)) {
     return {
       success: false,

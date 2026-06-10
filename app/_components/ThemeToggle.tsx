@@ -26,7 +26,7 @@ export default function ThemeToggle() {
           boxShadow: 'inset 0 1px 3px rgba(0,0,0,0.5), 0.5px 0.5px 1px rgba(255,255,255,0.4)',
         }}
       >
-        {/* Sun/Moon satellite */}
+
         <div
           style={{
             width: 'clamp(20px, 4vw, 26px)',
@@ -41,7 +41,7 @@ export default function ThemeToggle() {
             transition: 'all 0.6s ease',
           }}
         >
-          {/* Inner shadow ring */}
+
           <div
             style={{
               position: 'absolute', inset: 0, borderRadius: '50%', zIndex: 2,
@@ -75,7 +75,7 @@ export default function ThemeToggle() {
             </div>
           </div>
 
-          {/* Rays */}
+
           <div
             className="rays"
             style={{
@@ -95,7 +95,7 @@ export default function ThemeToggle() {
           </div>
         </div>
 
-        {/* Stars */}
+
         <div
           className="stars"
           style={{
@@ -127,7 +127,7 @@ export default function ThemeToggle() {
           ))}
         </div>
 
-        {/* Clouds */}
+
         <div
           className="clouds"
           style={{
@@ -136,7 +136,7 @@ export default function ThemeToggle() {
             isolation: 'isolate', transition: 'all 0.6s ease',
           }}
         >
-          {/* Cloud set 1 (white) */}
+
           <div className="cloudset1" style={{
             position: 'absolute', inset: 0,
             bottom: '-15%', right: '-10%', zIndex: 1,
@@ -152,7 +152,7 @@ export default function ThemeToggle() {
               }} />
             ))}
           </div>
-          {/* Cloud set 2 (blueish) */}
+
           <div className="cloudset2" style={{
             position: 'absolute', inset: 0,
             bottom: '0%', right: '-6%',
