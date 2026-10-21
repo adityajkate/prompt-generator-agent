@@ -11,7 +11,7 @@
 
 <br>
 
-Generate professional diffusion model prompts from a theme and aspect ratio. Built with Next.js 16, powered by NVIDIA Llama 3.3 70B.
+Generate professional diffusion model prompts from a theme and aspect ratio. Built with Next.js 16, powered by NVIDIA Llama 3.3 70B
 
 <br>
 
