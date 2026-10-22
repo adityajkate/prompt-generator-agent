@@ -28,7 +28,7 @@ Output is a single cohesive prompt ready to paste into any diffusion model.
 - **Framework** - Next.js 16 (App Router)
 - **Styling** - Tailwind CSS v4
 - **AI** - NVIDIA Llama 3.3 70B via OpenAI-compatible API
-- **Animation** - GSAP, Three.js
+- **Animation** - GSAP, Three.js, Lenis
 - **Font** - Geist
 
 ## Local
