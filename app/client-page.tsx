@@ -63,7 +63,7 @@ export default function ClientPage() {
           isLoading={state.status === 'loading'}
           onThemeChange={setTheme}
           onAspectRatioChange={setAspectRatio}
-          onSubmit={() => handleSubmit(theme, aspectRatio)}
+          onSubmit={() => handleSubmit(theme, aspectRatio=9:16)}
         />
 
         <ResultDisplay
